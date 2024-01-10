@@ -133,4 +133,3 @@ function logoutUser() {
 
 document.getElementById("login").addEventListener("click", loginUser);
 document.getElementById("logout").addEventListener("click", logoutUser);
-</script>
