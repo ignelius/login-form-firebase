@@ -1,4 +1,36 @@
 // login form firebase dengan premium konten || updated : 10 Jan 2024
+let igneliusJS = {
+    alert: {
+        invalidMail: "Masukkan email dan password terlebih dulu!",
+        invalidPW: "Harap masukkan password terlebih dulu!",
+        errorPW: "Password tidak sesuai!",
+        loginSukses: "Berhasil login!",
+        loginError: "Login gagal",
+        signOutSuccess: "Berhasil logout!",
+        signOutError: "Terjadi kesalahan saat sign-out",
+        nonPremiumAccess: "Anda tidak memiliki akses premium.",
+        emailNotVerified: "Email belum terverifikasi. Silakan verifikasi email Anda terlebih dahulu."
+    },
+    console: {
+        log: console.log,
+        error: console.error
+    }
+};
+
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+import {
+    getAnalytics
+} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+import {
+    getAuth,
+    signInWithEmailAndPassword,
+    onAuthStateChanged, // Tambahkan ini
+    signOut
+} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+
 const firebaseConfig = {
     apiKey: "AIzaSyCVar0TA45QMGl22eR5Bk1vsqjfHZH9-Gk",
     authDomain: "ignelius-login.firebaseapp.com",
